@@ -83,7 +83,9 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 
 ### Performance Review:
 ✅ **High Precision (~85.58%)** → Model makes fewer incorrect predictions.
+
 🟡 **Moderate Recall (~82.60%)** → Some faces may still be misclassified.
+
 ✅ **Good F1-score (~83.87%)** → Balanced between Precision and Recall.
 
 ## Conclusion
@@ -94,13 +96,15 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 ---
 
 ### Usage
-```python
-from face_shape_detector import detect_face_shape
 
-image_path = "path/to/your/image.jpg"
-predicted_shape = detect_face_shape(image_path)
-print("Predicted Face Shape:", predicted_shape)
-```
+To train the Random Forest model, follow these steps:
+
+1. Run `Create_data.py` to preprocess and extract features.
+2. Open and execute `Models_Training.ipynb` to train the Random Forest model.
+
+
+To use the trained model for prediction you can refer to 2 jupyter notebook file !!
+
 
 
 ## Try the Models
