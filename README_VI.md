@@ -96,6 +96,8 @@ Tôi đã thử nghiệm **CNN - EfficientNet B4** (được huấn luyện trư
 ### A. Để huấn luyện mô hình Random Forest, làm theo các bước:
 #### 1. Chuẩn bị dữ liệu.
 Đảm bảo tập dữ liệu của bạn được sắp xếp theo cấu trúc thư mục trong đó mỗi thư mục con tương ứng với một hình dạng khuôn mặt. Ví dụ:
+ ```bash
+
 train/
    heart/
        image1.jpg
@@ -113,6 +115,7 @@ train/
        image1.jpg
        image2.jpg
        ...
+```
 #### 2. Chạy `Create_data.py` để tiền xử lý và trích xuất đặc trưng.
 Bạn sẽ cần chạy tệp này hai lần. Một lần với thư mục train và một lần với thư mục test. Hãy nhớ cài đặt cấu hình file cần tạo trong code !!
 #### 3. Mở và chạy `Models_Training.ipynb` để huấn luyện mô hình.
