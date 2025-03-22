@@ -132,7 +132,7 @@ You will need to run this file twice. Once with train folder and once with the t
 
 ### B.To use the trained model:
 for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
-
+You can download the trained model from Google Drive link I put on the top of this README file
 1. Import the function from the `.py` file from one of the models
 ```python
 from Face_Shape_Detect_CNN import detect_face_shape
