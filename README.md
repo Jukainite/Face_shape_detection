@@ -1,4 +1,8 @@
 # Face Shape Detection
+<a href="https://colab.research.google.com/drive/1xLL78hwNCxJR1fsIBSfLCCQAg1IFmkCw?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Colab Trial"></a>
+<a href="https://github.com/Jukainite/Face_shape_detection/tree/main"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github Project Link"></a>
+<a href="https://drive.google.com/file/d/173kh8Jk3st9oBKkpP2m3GojT7v_7TIGq/view?usp=sharing"><img src="https://img.shields.io/badge/Model-Drive-blue?style=for-the-badge&logo=google-drive&logoColor=white" alt="Trained Models"></a>
+<a href="README_VI.md"><img src="https://img.shields.io/badge/Translate-Vietnamese-green" alt="Dịch sang tiếng Anh"></a>
 
 ## Project Objective
 This project aims to develop a function `detect_face_shape(image_path)` that can predict the face shape of the first detected face in an input image.
@@ -42,6 +46,7 @@ The project uses **MediaPipe** to detect **Face Mesh**, extracting key facial fe
 16. **Top Jaw Width**: Upper jaw width.
 17. **Forehead Width (Eyebrow-based)**: Forehead width based on the distance between eyebrows.
 18. **Chin Width**: Chin width.
+19. **Forehead width**: Forehead width
 
 ## Model Training
 A **Random Forest Classifier** was trained on the extracted features, yielding the following results:
@@ -83,7 +88,9 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 
 ### Performance Review:
 ✅ **High Precision (~85.58%)** → Model makes fewer incorrect predictions.
+
 🟡 **Moderate Recall (~82.60%)** → Some faces may still be misclassified.
+
 ✅ **Good F1-score (~83.87%)** → Balanced between Precision and Recall.
 
 ## Conclusion
@@ -93,21 +100,65 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 
 ---
 
-### Usage
-```python
-from face_shape_detector import detect_face_shape
+## Usage
 
+### A. To train the Random Forest model, follow these steps:
+#### 1. Prepare Your Data
+Ensure your dataset is organized in a directory structure where each subdirectory corresponds to a face shape category. For example:
+ ```bash
+
+train/
+   heart/
+       image1.jpg
+       image2.jpg
+       ...
+   oval/
+       image1.jpg
+       image2.jpg
+       ...
+   round/
+       image1.jpg
+       image2.jpg
+       ...
+   square/
+       image1.jpg
+       image2.jpg
+       ...
+```
+#### 2. Run `Create_data.py` to preprocess and extract features.
+You will need to run this file twice. Once with train folder and once with the test one. Remember to set the config in the code
+#### 3. Open and execute `Models_Training.ipynb` to train the Random Forest model.
+
+
+### B.To use the trained model:
+for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
+
+#### You can download the trained model from Google Drive link I put on the top of this README file
+
+1. Import the function from the `.py` file from one of the models
+```python
+from Face_Shape_Detect_CNN import detect_face_shape
+```
+OR
+
+```python
+from Face_Shape_Detect_RF import detect_face_shape
+```
+
+2. Give the function an image path as input. You will get a string of the face shape
+```python
 image_path = "path/to/your/image.jpg"
 predicted_shape = detect_face_shape(image_path)
 print("Predicted Face Shape:", predicted_shape)
 ```
+- **Input**: Image file path
+- **Output**: A string representing the predicted face shape (e.g., "Oval", "Round", etc.)
 
-
-## Try the Models
-You can test both trained models on Google Colab:
-[Colab Notebook](https://colab.research.google.com/drive/1xLL78hwNCxJR1fsIBSfLCCQAg1IFmkCw?usp=sharing)
 
 Thank you for your interest in this project! 🚀
+
+
+
 
 
 
