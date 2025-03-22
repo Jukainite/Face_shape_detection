@@ -1,4 +1,7 @@
 # Face Shape Detection
+<a href="https://colab.research.google.com/drive/1xLL78hwNCxJR1fsIBSfLCCQAg1IFmkCw?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Colab Trial"></a>
+
+<a href="https://github.com/Jukainite/Face_shape_detection/tree/main"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github Project Link"></a>
 
 ## Project Objective
 This project aims to develop a function `detect_face_shape(image_path)` that can predict the face shape of the first detected face in an input image.
@@ -103,15 +106,33 @@ To train the Random Forest model, follow these steps:
 2. Open and execute `Models_Training.ipynb` to train the Random Forest model.
 
 
-To use the trained model for prediction you can refer to 2 jupyter notebook file !!
+To use the trained model for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
 
+1. Import the function from the `.py` file from one of the models
+```python
+from Face_Shape_Detect_CNN import detect_face_shape
+```
+OR
 
+```python
+from Face_Shape_Detect_RF import detect_face_shape
+```
 
-## Try the Models
-You can test both trained models on Google Colab:
-[Colab Notebook](https://colab.research.google.com/drive/1xLL78hwNCxJR1fsIBSfLCCQAg1IFmkCw?usp=sharing)
+2. Give the function an image path as input. You will get a string of the face shape
+```python
+image_path = "path/to/your/image.jpg"
+predicted_shape = detect_face_shape(image_path)
+print("Predicted Face Shape:", predicted_shape)
+```
+- **Input**: Image file path
+- **Output**: A string representing the predicted face shape (e.g., "Oval", "Round", etc.)
+
 
 Thank you for your interest in this project! 🚀
+
+
+
+
 
 
 
