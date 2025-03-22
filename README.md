@@ -3,6 +3,8 @@
 
 <a href="https://github.com/Jukainite/Face_shape_detection/tree/main"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github Project Link"></a>
 
+<a href="https://drive.google.com/file/d/173kh8Jk3st9oBKkpP2m3GojT7v_7TIGq/view?usp=sharing"><img src="https://img.shields.io/badge/Model-Drive-blue?style=for-the-badge&logo=google-drive&logoColor=white" alt="Trained Models"></a>
+
 <a href="README_VI.md"><img src="https://img.shields.io/badge/Translate-Vietnamese-green" alt="Dịch sang tiếng Anh"></a>
 
 ## Project Objective
