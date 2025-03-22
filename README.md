@@ -6,34 +6,6 @@
 
 <a href="#" onclick="translateToVietnamese()"><img src="https://img.shields.io/badge/Translate-Vietnamese-green" alt="Translate to Vietnamese"></a>
 
-<script>
-function translateToVietnamese() {
-    var elements = document.querySelectorAll("body *");
-    elements.forEach(element => {
-        element.innerHTML = element.innerHTML
-            .replace(/Project Objective/g, "Mục tiêu dự án")
-            .replace(/Dataset/g, "Tập dữ liệu")
-            .replace(/Feature Extraction/g, "Trích xuất đặc trưng")
-            .replace(/Model Training/g, "Huấn luyện mô hình")
-            .replace(/Evaluation Results/g, "Kết quả đánh giá")
-            .replace(/Observations/g, "Nhận xét")
-            .replace(/Alternative Solution/g, "Giải pháp thay thế")
-            .replace(/Performance Review/g, "Đánh giá hiệu suất")
-            .replace(/Conclusion/g, "Kết luận")
-            .replace(/Usage/g, "Hướng dẫn sử dụng")
-            .replace(/To train the Random Forest model, follow these steps/g, "Để huấn luyện mô hình Random Forest, hãy làm theo các bước sau")
-            .replace(/Prepare Your Data/g, "Chuẩn bị dữ liệu của bạn")
-            .replace(/Run `Create_data.py` to preprocess and extract features./g, "Chạy `Create_data.py` để tiền xử lý và trích xuất đặc trưng.")
-            .replace(/Open and execute `Models_Training.ipynb` to train the Random Forest model./g, "Mở và chạy `Models_Training.ipynb` để huấn luyện mô hình Random Forest.")
-            .replace(/To use the trained model/g, "Để sử dụng mô hình đã huấn luyện")
-            .replace(/Import the function from the `.py` file from one of the models/g, "Nhập hàm từ tệp `.py` của một trong các mô hình")
-            .replace(/Give the function an image path as input. You will get a string of the face shape/g, "Cung cấp đường dẫn ảnh làm đầu vào cho hàm. Bạn sẽ nhận được một chuỗi mô tả hình dạng khuôn mặt")
-            .replace(/Input/g, "Đầu vào")
-            .replace(/Output/g, "Đầu ra")
-            .replace(/Thank you for your interest in this project!/g, "Cảm ơn bạn đã quan tâm đến dự án này!");
-    });
-}
-</script>
 ## Project Objective
 This project aims to develop a function `detect_face_shape(image_path)` that can predict the face shape of the first detected face in an input image.
 
