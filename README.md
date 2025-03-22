@@ -3,6 +3,9 @@
 
 <a href="https://github.com/Jukainite/Face_shape_detection/tree/main"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github Project Link"></a>
 
+
+<a href="#" onclick="translateToVietnamese()"><img src="https://img.shields.io/badge/Translate-Vietnamese-green" alt="Translate to Vietnamese"></a>
+
 ## Project Objective
 This project aims to develop a function `detect_face_shape(image_path)` that can predict the face shape of the first detected face in an input image.
 
