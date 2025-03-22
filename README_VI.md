@@ -85,6 +85,7 @@ Tôi đã thử nghiệm **CNN - EfficientNet B4** (được huấn luyện trư
 - **Precision**: 85.58%
 - **Recall**: 82.60%
 - **F1-score**: 83.87%
+
 ## Kết luận
 🔥 Mô hình CNN có hiệu suất vượt trội so với Random Forest.
 📌 Recall có thể cải thiện nếu cần thiết.
@@ -93,16 +94,51 @@ Tôi đã thử nghiệm **CNN - EfficientNet B4** (được huấn luyện trư
 ## Hướng dẫn sử dụng
 
 ### A. Để huấn luyện mô hình Random Forest, làm theo các bước:
-1. Chuẩn bị dữ liệu.
-2. Chạy `Create_data.py` để tiền xử lý và trích xuất đặc trưng.
-3. Mở và chạy `Models_Training.ipynb` để huấn luyện mô hình.
+#### 1. Chuẩn bị dữ liệu.
+Đảm bảo tập dữ liệu của bạn được sắp xếp theo cấu trúc thư mục trong đó mỗi thư mục con tương ứng với một hình dạng khuôn mặt. Ví dụ:
+train/
+   heart/
+       image1.jpg
+       image2.jpg
+       ...
+   oval/
+       image1.jpg
+       image2.jpg
+       ...
+   round/
+       image1.jpg
+       image2.jpg
+       ...
+   square/
+       image1.jpg
+       image2.jpg
+       ...
+#### 2. Chạy `Create_data.py` để tiền xử lý và trích xuất đặc trưng.
+Bạn sẽ cần chạy tệp này hai lần. Một lần với thư mục train và một lần với thư mục test. Hãy nhớ cài đặt cấu hình file cần tạo trong code !!
+#### 3. Mở và chạy `Models_Training.ipynb` để huấn luyện mô hình.
 
 ### B. Để sử dụng mô hình đã huấn luyện:
+1. Import hàm từ các file `.py` có tên model mà bạn muốn sử dụng (RF,CNN):
 ```python
 from Face_Shape_Detect_CNN import detect_face_shape
 ```
-HOẶC
+OR
+
 ```python
 from Face_Shape_Detect_RF import detect_face_shape
 ```
+
+2. Đưa vào hàm input là 1 đường dẫn tới ảnh. Bạn sẽ nhân được 1 chuỗi chỉ định hình dạng khuôn mặt.
+```python
+image_path = "path/to/your/image.jpg"
+predicted_shape = detect_face_shape(image_path)
+print("Predicted Face Shape:", predicted_shape)
+```
+- **Input**: Đường dẫn của tệp hình ảnh
+- **Output**: 
+Một chuỗi biểu thị hình dạng khuôn mặt được dự đoán (Ví dụ: "Oval", "Round", ...)
+
+
+
+Cảm ơn bạn đã quan tâm tới dự án này! 🚀
 
