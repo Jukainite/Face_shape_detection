@@ -106,7 +106,8 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 2. Open and execute `Models_Training.ipynb` to train the Random Forest model.
 
 
-#### To use the trained model for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
+#### To use the trained model:
+for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
 
 1. Import the function from the `.py` file from one of the models
 ```python
