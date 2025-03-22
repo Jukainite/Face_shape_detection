@@ -121,7 +121,7 @@ train/
        image2.jpg
        ...
 ##### 2. Run `Create_data.py` to preprocess and extract features.
-You will need to run this file twice. Once with train folder and once with the test one. Rêmmber to set the config in the code
+You will need to run this file twice. Once with train folder and once with the test one. Remember to set the config in the code
 ##### 3. Open and execute `Models_Training.ipynb` to train the Random Forest model.
 
 
