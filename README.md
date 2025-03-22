@@ -98,10 +98,10 @@ I experimented with **CNN - EfficientNet B4** (pretrained) and fine-tuned it on 
 
 ---
 
-### Usage
+## Usage
 
-#### To train the Random Forest model, follow these steps:
-##### 1. Prepare Your Data
+### A. To train the Random Forest model, follow these steps:
+#### 1. Prepare Your Data
 Ensure your dataset is organized in a directory structure where each subdirectory corresponds to a face shape category. For example:
 train/
    heart/
@@ -120,12 +120,12 @@ train/
        image1.jpg
        image2.jpg
        ...
-##### 2. Run `Create_data.py` to preprocess and extract features.
+#### 2. Run `Create_data.py` to preprocess and extract features.
 You will need to run this file twice. Once with train folder and once with the test one. Remember to set the config in the code
-##### 3. Open and execute `Models_Training.ipynb` to train the Random Forest model.
+#### 3. Open and execute `Models_Training.ipynb` to train the Random Forest model.
 
 
-#### To use the trained model:
+### B.To use the trained model:
 for prediction you can refer to 2 `Main` jupyter notebook file or import the built-in function `detect_face_shape` by importing from the 2 model `.py` files !!
 
 1. Import the function from the `.py` file from one of the models
