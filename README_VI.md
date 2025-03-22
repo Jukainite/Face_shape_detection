@@ -82,7 +82,9 @@ Tôi đã thử nghiệm **CNN - EfficientNet B4** (được huấn luyện trư
 
 ### Kết quả mô hình CNN:
 - **Độ chính xác**: 86.1%
-
+- **Precision**: 85.58%
+- **Recall**: 82.60%
+- **F1-score**: 83.87%
 ## Kết luận
 🔥 Mô hình CNN có hiệu suất vượt trội so với Random Forest.
 📌 Recall có thể cải thiện nếu cần thiết.
