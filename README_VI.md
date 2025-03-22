@@ -120,6 +120,8 @@ Bạn sẽ cần chạy tệp này hai lần. Một lần với thư mục train
 #### 3. Mở và chạy `Models_Training.ipynb` để huấn luyện mô hình.
 
 ### B. Để sử dụng mô hình đã huấn luyện:
+Để dự đoán, bạn có thể tham khảo 2 tệp jupyter notebook `Main` hoặc nhập hàm tích hợp `detect_face_shape` bằng cách import từ 2 tệp model `.py`!!
+#### Bạn có thể tải xuống mô hình đã được đào tạo từ liên kết Google Drive mà tôi đặt ở đầu tệp README này
 1. Import hàm từ các file `.py` có tên model mà bạn muốn sử dụng (RF,CNN):
 ```python
 from Face_Shape_Detect_CNN import detect_face_shape
